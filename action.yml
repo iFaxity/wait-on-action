@@ -72,4 +72,4 @@ inputs:
     default: 750
 runs:
   using: node12
-  main: main.js
+  main: dist/index.js
