@@ -1,9 +1,8 @@
 const core = require('@actions/core');
 const waitOn = require('wait-on');
 
-function numberInput(name, def) {
-  const num = parseInt(core.getInput(name));
-  return def != null && isNaN(num) ? def : num;
+function numberInput(name) {
+  return parseInt(core.getInput(name));
 }
 function booleanInput(name) {
   return core.getInput(name).toLowerCase() == 'true';
@@ -17,7 +16,7 @@ async function main() {
   const interval = numberInput('interval');
   const log = booleanInput('log');
   const reverse = booleanInput('reverse');
-  const simultaneous = numberInput('simultaneous', Number.POSITIVE_INFINITY);
+  const simultaneous = numberInput('simultaneous');
   const timeout = numberInput('timeout');
   const tcpTimeout = numberInput('tcpTimeout');
   const verbose = booleanInput('verbose');
