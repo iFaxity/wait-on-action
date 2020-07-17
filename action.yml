@@ -4,68 +4,70 @@ inputs:
   resource:
     required: true
     description: |
-    Resources types are defined by their prefix, if no prefix is
-    present, the resource is assumed to be of type 'file'
+      Resources types are defined by their prefix, if no prefix is
+      present, the resource is assumed to be of type 'file'
 
-    resource prefixes are:
+      resource prefixes are:
 
-      file:      - regular file (also default type). ex: file:/path/to/file
-      http:      - HTTP HEAD returns 2XX response. ex: http://m.com:90/foo
-      https:     - HTTPS HEAD returns 2XX response. ex: https://my/bar
-      http-get:  - HTTP GET returns 2XX response. ex: http://m.com:90/foo
-      https-get: - HTTPS GET returns 2XX response. ex: https://my/bar
-      tcp:       - TCP port is listening. ex: 1.2.3.4:9000 or foo.com:700
-      socket:    - Domain Socket is listening. ex: socket:/path/to/sock
-                   For http over socket, use http://unix:SOCK_PATH:URL_PATH
-                   like http://unix:/path/to/sock:/foo/bar or
-                        http-get://unix:/path/to/sock:/foo/bar
+        file:      - regular file (also default type). ex: file:/path/to/file
+        http:      - HTTP HEAD returns 2XX response. ex: http://m.com:90/foo
+        https:     - HTTPS HEAD returns 2XX response. ex: https://my/bar
+        http-get:  - HTTP GET returns 2XX response. ex: http://m.com:90/foo
+        https-get: - HTTPS GET returns 2XX response. ex: https://my/bar
+        tcp:       - TCP port is listening. ex: 1.2.3.4:9000 or foo.com:700
+        socket:    - Domain Socket is listening. ex: socket:/path/to/sock
+                    For http over socket, use http://unix:SOCK_PATH:URL_PATH
+                    like http://unix:/path/to/sock:/foo/bar or
+                          http-get://unix:/path/to/sock:/foo/bar
   config:
-    description: 'js or json config file, useful for http(s) options'
+    description: js or json config file, useful for http(s) options
     required: false
   delay:
-    description: 'Initial delay before checking for resources in ms, default 0'
+    description: Initial delay before checking for resources in ms, default 0
     required: false
     default: 0
   httpTimeout:
-    description: 'Maximum time in ms to wait for an HTTP HEAD/GET request, default 0
-    which results in using the OS default'
+    description: |
+      Maximum time in ms to wait for an HTTP HEAD/GET request, default 0
+      which results in using the OS default
     required: false
     default: 0
   interval:
-    description: 'Interval to poll resources in ms, default 250ms'
+    description: Interval to poll resources in ms, default 250ms
     required: false
     default: 250
   log:
-    description: 'Log resources begin waited on and when complete or errored'
+    description: Log resources begin waited on and when complete or errored
     required: false
     default: false
   reverse:
-    description: 'Reverse operation, wait for resources to NOT be available'
+    description: Reverse operation, wait for resources to NOT be available
     required: false
     default: false
   simultaneous:
-    description: 'Simultaneous / Concurrent connections to a resource, default Infinity
-    Setting this to 1 would delay new requests until previous one has completed.
-    Used to limit the number of connections attempted to a resource at a time'
-    required: false
+    description: |
+      Simultaneous / Concurrent connections to a resource, default Infinity
+      Setting this to 1 would delay new requests until previous one has completed.
+      Used to limit the number of connections attempted to a resource at a time'
+      required: false
   timeout:
-    description: 'Maximum time in ms to wait before exiting with failure (1) code,
-    default Infinity'
+    description: Maximum time in ms to wait before exiting with failure (1) code, default Infinity
     required: false
   tcpTimeout:
-    description: 'Maximum time in ms for tcp connect, default 300ms'
+    description: Maximum time in ms for tcp connect, default 300ms
     required: false
     default: 300
   verbose:
-    description: 'Enable debug output to stdout'
+    description: Enable debug output to stdout
     required: false
     default: false
   window:
-    description: 'Stability window, the time in ms defining the window of time that
-    resource needs to have not changed (file size or availability) before
-    signalling success, default 750ms. If less than interval, it will be
-    reset to the value of interval. This is only used for files, other
-    resources are considered available on first detection.'
+    description: |
+      Stability window, the time in ms defining the window of time that
+      resource needs to have not changed (file size or availability) before
+      signalling success, default 750ms. If less than interval, it will be
+      reset to the value of interval. This is only used for files, other
+      resources are considered available on first detection.
     required: false
     default: 750
 runs:
