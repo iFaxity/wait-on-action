@@ -1,5 +1,8 @@
 name: Wait on
 description: Waits for resource(s) to be accessible
+branding:
+  icon: clock
+  color: gray-dark
 inputs:
   resource:
     required: true
