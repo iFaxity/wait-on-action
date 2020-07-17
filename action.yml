@@ -5,7 +5,6 @@ branding:
   color: gray-dark
 inputs:
   resource:
-    required: true
     description: |
       Resources types are defined by their prefix, if no prefix is
       present, the resource is assumed to be of type 'file'
@@ -22,6 +21,7 @@ inputs:
                     For http over socket, use http://unix:SOCK_PATH:URL_PATH
                     like http://unix:/path/to/sock:/foo/bar or
                           http-get://unix:/path/to/sock:/foo/bar
+    required: true
   config:
     description: js or json config file, useful for http(s) options
     required: false
@@ -52,7 +52,7 @@ inputs:
       Simultaneous / Concurrent connections to a resource, default Infinity
       Setting this to 1 would delay new requests until previous one has completed.
       Used to limit the number of connections attempted to a resource at a time'
-      required: false
+    required: false
   timeout:
     description: Maximum time in ms to wait before exiting with failure (1) code, default Infinity
     required: false

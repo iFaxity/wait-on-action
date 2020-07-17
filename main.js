@@ -2,7 +2,11 @@ const core = require('@actions/core');
 const waitOn = require('wait-on');
 
 function numberInput(name) {
-  return parseInt(core.getInput(name));
+  const value = core.getInput(name);
+
+  if (value) {
+    return parseInt(value);
+  }
 }
 function booleanInput(name) {
   return core.getInput(name).toLowerCase() == 'true';

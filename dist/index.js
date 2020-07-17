@@ -10285,7 +10285,11 @@ const core = __webpack_require__(470);
 const waitOn = __webpack_require__(13);
 
 function numberInput(name) {
-  return parseInt(core.getInput(name));
+  const value = core.getInput(name);
+
+  if (value) {
+    return parseInt(value);
+  }
 }
 function booleanInput(name) {
   return core.getInput(name).toLowerCase() == 'true';
