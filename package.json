@@ -1,0 +1,19 @@
+{
+  "name": "wait-on-action",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "wait-on": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.23"
+  }
+}
