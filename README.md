@@ -1,4 +1,4 @@
-ifaxity/wait-on-action
+iFaxity/wait-on-action
 ======================
 
 A GitHub Actions wrapper for the [wait-on](https://npmjs.com/package/wait-on)
@@ -85,7 +85,7 @@ resources are considered available on first detection.
 Example usage
 -------------
 ```yaml
-uses: ifaxity/wait-on-action
+uses: iFaxity/wait-on-action
 with:
   resource: http://localhost:8080
 ```
