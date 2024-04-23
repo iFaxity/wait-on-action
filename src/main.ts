@@ -1,14 +1,15 @@
-const core = require('@actions/core');
-const waitOn = require('wait-on');
+import core from '@actions/core';
+import waitOn, { WaitOnOptions } from 'wait-on';
 
-function numberInput(name) {
+function numberInput(name: string) {
   const value = core.getInput(name);
 
   if (value) {
     return parseInt(value);
   }
 }
-function booleanInput(name) {
+
+function booleanInput(name: string) {
   return core.getInput(name).toLowerCase() == 'true';
 }
 
@@ -26,12 +27,12 @@ async function main() {
   const verbose = booleanInput('verbose');
   const window = numberInput('window');
 
-  let defaults = {};
+  let defaults: Partial<WaitOnOptions> = {};
   if (config) {
     defaults = require(config);
   }
 
-  const opts = {
+  const opts: WaitOnOptions = {
     ...defaults,
     resources: Array.isArray(resource) ? resource : [resource],
     delay,
@@ -50,8 +51,9 @@ async function main() {
     // Usage with async await
     await waitOn(opts);
     core.debug('Successfully waited for resources to become accessible');
-  } catch(ex) {
-    core.setFailed(ex);
+  } catch (ex) {
+    const err = ex instanceof Error ? ex : String(ex);
+    core.setFailed(err);
   }
 }
 
