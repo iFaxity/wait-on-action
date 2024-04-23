@@ -1,8 +1,10 @@
 {
   "name": "wait-on-action",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
+  "author": "iFaxity (christian@faxity.se)",
+  "license": "MIT",
   "main": "main.js",
   "scripts": {
     "build": "ncc build main.js -o dist",
@@ -10,8 +12,6 @@
     "format": "prettier --write .",
     "prepare": "husky"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.9.1",
     "wait-on": "^5.3.0"
