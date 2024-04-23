@@ -14,8 +14,10 @@
     "wait-on": "^5.3.0"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.2.1",
     "@types/node": "^14.0.23",
-    "@vercel/ncc": "^0.38.1"
+    "@vercel/ncc": "^0.38.1",
+    "prettier": "3.2.5"
   },
   "packageManager": "pnpm@9.0.5+sha256.61bd66913b52012107ec25a6ee4d6a161021ab99e04f6acee3aa50d0e34b4af9"
 }
