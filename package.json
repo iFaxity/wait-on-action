@@ -1,21 +1,30 @@
 {
   "name": "wait-on-action",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
+  "author": "iFaxity (christian@faxity.se)",
+  "license": "MIT",
   "main": "main.js",
   "scripts": {
-    "build": "ncc build main.js -o dist"
+    "build": "ncc build main.js -o dist",
+    "prettier": "prettier --check .",
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.9.1",
     "wait-on": "^5.3.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@ianvs/prettier-plugin-sort-imports": "4.2.1",
     "@types/node": "^14.0.23",
-    "@vercel/ncc": "^0.38.1"
+    "@vercel/ncc": "^0.38.1",
+    "husky": "9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "3.2.5"
   },
   "packageManager": "pnpm@9.0.5+sha256.61bd66913b52012107ec25a6ee4d6a161021ab99e04f6acee3aa50d0e34b4af9"
 }
