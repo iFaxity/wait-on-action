@@ -1,8 +1,8 @@
-import core from '@actions/core';
+import { debug, getInput, setFailed } from '@actions/core';
 import waitOn, { WaitOnOptions } from 'wait-on';
 
 function numberInput(name: string) {
-  const value = core.getInput(name);
+  const value = getInput(name);
 
   if (value) {
     return parseInt(value);
@@ -10,12 +10,12 @@ function numberInput(name: string) {
 }
 
 function booleanInput(name: string) {
-  return core.getInput(name).toLowerCase() == 'true';
+  return getInput(name).toLowerCase() == 'true';
 }
 
 async function main() {
-  const resource = core.getInput('resource', { required: true }).split(' ');
-  const config = core.getInput('config');
+  const resource = getInput('resource', { required: true }).split(' ');
+  const config = getInput('config');
   const delay = numberInput('delay');
   const httpTimeout = numberInput('httpTimeout');
   const interval = numberInput('interval');
@@ -50,10 +50,10 @@ async function main() {
   try {
     // Usage with async await
     await waitOn(opts);
-    core.debug('Successfully waited for resources to become accessible');
+    debug('Successfully waited for resources to become accessible');
   } catch (ex) {
     const err = ex instanceof Error ? ex : String(ex);
-    core.setFailed(err);
+    setFailed(err);
   }
 }
 
