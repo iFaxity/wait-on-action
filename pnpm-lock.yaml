@@ -23,7 +23,7 @@ importers:
         version: 19.2.2
       '@ianvs/prettier-plugin-sort-imports':
         specifier: 4.3.1
-        version: 4.3.1(prettier@3.3.2)
+        version: 4.3.1(prettier@3.3.3)
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@23.0.8(typescript@5.5.3))
@@ -46,8 +46,8 @@ importers:
         specifier: 15.2.7
         version: 15.2.7
       prettier:
-        specifier: 3.3.2
-        version: 3.3.2
+        specifier: 3.3.3
+        version: 3.3.3
       typescript:
         specifier: 5.5.3
         version: 5.5.3
@@ -1588,8 +1588,8 @@ packages:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
     engines: {node: '>= 0.4'}
 
-  prettier@3.3.2:
-    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
+  prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2319,14 +2319,14 @@ snapshots:
     dependencies:
       '@hapi/hoek': 9.3.0
 
-  '@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.2)':
+  '@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3)':
     dependencies:
       '@babel/core': 7.24.4
       '@babel/generator': 7.24.4
       '@babel/parser': 7.24.4
       '@babel/traverse': 7.24.1
       '@babel/types': 7.24.0
-      prettier: 3.3.2
+      prettier: 3.3.3
       semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
@@ -3662,7 +3662,7 @@ snapshots:
 
   possible-typed-array-names@1.0.0: {}
 
-  prettier@3.3.2: {}
+  prettier@3.3.3: {}
 
   process-nextick-args@2.0.1: {}
 
