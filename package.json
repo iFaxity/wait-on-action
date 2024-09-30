@@ -24,7 +24,7 @@
     "@semantic-release/git": "10.0.1",
     "@types/node": "22.5.5",
     "@types/wait-on": "5.3.4",
-    "@vercel/ncc": "0.38.1",
+    "@vercel/ncc": "0.38.2",
     "husky": "9.1.6",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
