@@ -22,8 +22,8 @@ importers:
         specifier: 19.8.1
         version: 19.8.1
       '@ianvs/prettier-plugin-sort-imports':
-        specifier: 4.6.2
-        version: 4.6.2(prettier@3.6.2)
+        specifier: 4.7.0
+        version: 4.7.0(prettier@3.6.2)
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@23.0.8(typescript@5.9.2))
@@ -186,8 +186,8 @@ packages:
   '@hapi/topo@5.1.0':
     resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
 
-  '@ianvs/prettier-plugin-sort-imports@4.6.2':
-    resolution: {integrity: sha512-kHiL1IghIodo43clNQaJJU2rPqXEioPG+Ink4/T5za46A0ggSNvIx4NM3hGgciQ2VpDaR/X8cTJIZDKRurWjPw==}
+  '@ianvs/prettier-plugin-sort-imports@4.7.0':
+    resolution: {integrity: sha512-soa2bPUJAFruLL4z/CnMfSEKGznm5ebz29fIa9PxYtu8HHyLKNE1NXAs6dylfw1jn/ilEIfO2oLLN6uAafb7DA==}
     peerDependencies:
       '@prettier/plugin-oxc': ^0.0.4
       '@vue/compiler-sfc': 2.7.x || 3.x
@@ -875,6 +875,9 @@ packages:
 
   import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
+
+  import-meta-resolve@4.2.0:
+    resolution: {integrity: sha512-Iqv2fzaTQN28s/FwZAoFq0ZSs/7hMAHJVX+w8PZl3cY19Pxk6jFFalxQoIfW2826i/fDLXv8IiEZRIT0lDuWcg==}
 
   indent-string@4.0.0:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}
@@ -1781,8 +1784,8 @@ packages:
     resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==}
     engines: {node: '>=12.20'}
 
-  yoctocolors@2.1.1:
-    resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
+  yoctocolors@2.1.2:
+    resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
 snapshots:
@@ -1971,7 +1974,7 @@ snapshots:
     dependencies:
       '@hapi/hoek': 9.3.0
 
-  '@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.6.2)':
+  '@ianvs/prettier-plugin-sort-imports@4.7.0(prettier@3.6.2)':
     dependencies:
       '@babel/generator': 7.28.3
       '@babel/parser': 7.28.3
@@ -2524,7 +2527,7 @@ snapshots:
       pretty-ms: 9.2.0
       signal-exit: 4.1.0
       strip-final-newline: 4.0.0
-      yoctocolors: 2.1.1
+      yoctocolors: 2.1.2
 
   fast-content-type-parse@2.0.1: {}
 
@@ -2704,11 +2707,13 @@ snapshots:
   import-from-esm@1.3.4:
     dependencies:
       debug: 4.4.1
-      import-meta-resolve: 4.1.0
+      import-meta-resolve: 4.2.0
     transitivePeerDependencies:
       - supports-color
 
   import-meta-resolve@4.1.0: {}
+
+  import-meta-resolve@4.2.0: {}
 
   indent-string@4.0.0: {}
 
@@ -3470,4 +3475,4 @@ snapshots:
 
   yocto-queue@1.2.1: {}
 
-  yoctocolors@2.1.1: {}
+  yoctocolors@2.1.2: {}
